@@ -21,8 +21,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Get Red version
-      run: echo "DASH_VERSION=$(cat ./requirements.txt | grep 'Red-DiscordBot' | sed 's/Red-Dashboard == //g')" >> $GITHUB_ENV
+    - name: Get Red-Dashboard version
+      run: echo "DASH_VERSION=$(cat ./requirements.txt | grep 'Red-Dashboard' | sed 's/Red-Dashboard == //g')" >> $GITHUB_ENV
 
     - name: Build and push
       id: docker_build
