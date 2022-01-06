@@ -1,21 +1,21 @@
 version: '3.8'
 services:
-  labbot:
+  red-bot:
     image: rhomelab/labbot:latest
-    container_name: LabBot
+    container_name: RedBot
     restart: always
-    command: /bin/bash -c "redbot LabBot --team-members-are-owners --rpc --rpc-port 6133"
+    command: /bin/bash -c "redbot MyBotName --team-members-are-owners --rpc --rpc-port 6133"
     ports: [42356:42356]
     volumes:
-      - /opt/LabBot/share:/home/redbot/.local/share
-      - /opt/LabBot/Red-DiscordBot:/usr/local/share/Red-DiscordBot
+      - /opt/RedBot/share:/home/redbot/.local/share
+      - /opt/RedBot/Red-DiscordBot:/usr/local/share/Red-DiscordBot
 
-  labbot-dash:
+  red-dash:
     image: tigattack/red-dashboard:latest
-    container_name: LabBot_Dashboard
+    container_name: redbot_Dashboard
     restart: always
-    network_mode: "container:LabBot"
-    depends_on: ["labbot"]
+    network_mode: "container:RedBot"
+    depends_on: ["redbot"]
     environment:
       WEB_PORT: 42356
       RPC_PORT: 6133
