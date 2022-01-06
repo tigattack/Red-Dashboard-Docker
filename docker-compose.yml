@@ -15,7 +15,7 @@ services:
     container_name: redbot_Dashboard
     restart: always
     network_mode: "container:RedBot"
-    depends_on: ["redbot"]
+    depends_on: ["red-bot"]
     environment:
       WEB_PORT: 42356
       RPC_PORT: 6133
