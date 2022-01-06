@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  red-dash:
+    image: tigattack/red-dashboard:latest
+    container_name: RedBot_Dashboard
+    restart: always
+    network_mode: "host"
+    depends_on: ["redbot"]
+    environment:
+      WEB_PORT: 42356
+      RPC_PORT: 6133

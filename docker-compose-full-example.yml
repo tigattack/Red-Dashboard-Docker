@@ -12,7 +12,7 @@ services:
 
   red-dash:
     image: tigattack/red-dashboard:latest
-    container_name: redbot_Dashboard
+    container_name: RedBot_Dashboard
     restart: always
     network_mode: "container:RedBot"
     depends_on: ["redbot"]
