@@ -1,0 +1,4 @@
+pip
+wheel
+setuptools
+Red-Dashboard == 0.1.8a0

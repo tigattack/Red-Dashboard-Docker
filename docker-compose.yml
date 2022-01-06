@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  labbot:
+    image: rhomelab/labbot:latest
+    container_name: LabBot
+    restart: always
+    command: /bin/bash -c "redbot LabBot --team-members-are-owners"
+    ports: [42356:42356]
+    volumes:
+      - /opt/LabBot/share:/home/redbot/.local/share
+      - /opt/LabBot/Red-DiscordBot:/usr/local/share/Red-DiscordBot
+
+  labbot-dash:
+    image: rhomelab/red-dashboard
+    container_name: LabBot_Dashboard
+    restart: always
+    network_mode: "container:LabBot"
+    depends_on: ["labbot"]
+    environment:
+      WEB_PORT: 42356
+      RPC_PORT: 6133
