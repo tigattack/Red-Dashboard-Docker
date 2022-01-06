@@ -4,7 +4,7 @@ services:
     image: rhomelab/labbot:latest
     container_name: LabBot
     restart: always
-    command: /bin/bash -c "redbot LabBot --team-members-are-owners"
+    command: /bin/bash -c "redbot LabBot --team-members-are-owners --rpc --rpc-port 6133"
     ports: [42356:42356]
     volumes:
       - /opt/LabBot/share:/home/redbot/.local/share
