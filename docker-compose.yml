@@ -11,8 +11,7 @@ services:
       - /opt/LabBot/Red-DiscordBot:/usr/local/share/Red-DiscordBot
 
   labbot-dash:
-    build:
-      context: ./
+    image: tigattack/red-dashboard:latest
     container_name: LabBot_Dashboard
     restart: always
     network_mode: "container:LabBot"
