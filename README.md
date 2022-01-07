@@ -1,5 +1,8 @@
 # Red-Dashboard Docker
 
+![Docker Pulls](https://img.shields.io/docker/pulls/tigattack/red-dashboard?logo=docker&style=for-the-badge)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/tigattack/red-dashboard?label=red-dashboard%20version&logo=discord&style=for-the-badge)
+
 [Red-Dashboard](https://github.com/Cog-Creators/Red-Dashboard), now containerised.
 
 Note: This is an unsupported deployment method. Do not expect support from the developers of Red-Dashboard if you run into any issues.
