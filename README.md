@@ -20,7 +20,7 @@ Note: This is an unsupported deployment method. Do not expect support from the d
 
 There are two ways you can use this.
 
-1. With Red-DiscordBot in Docker, using [rHomelab's Red-DiscordBot](https://hub.docker.com/r/rhomelab/labbot) Docker container.  
+1. With Red-DiscordBot in Docker, using [rHomelab's Red-DiscordBot](https://hub.docker.com/r/rhomelab/red-discordbot) Docker container.  
   This is referred to as "full Docker" below.
 2. Standalone, communicating with a non-Docker (e.g. Python venv) installation of Red-DiscordBot.
 
@@ -32,7 +32,7 @@ After completing either of the below sections, Red-Dashboard will be available a
 
 ### Prerequisites
 
-Follow the [instructions](https://hub.docker.com/r/rhomelab/labbot#red-docker-setup) to set up [rHomelab](https://github.com/rHomelab)'s Red-DiscordBot Docker container.
+Follow the [instructions](https://github.com/rHomelab/Red-DiscordBot-Docker#setup) to set up [rHomelab](https://github.com/rHomelab)'s Red-DiscordBot Docker container.
 
 ### Run with `docker-compose`
 
@@ -42,10 +42,10 @@ A number of configuration points between the bot service and dashboard service `
 
 | **Line**                                  | **Depends on**                               | **Relevant value** |
 |-------------------------------------------|----------------------------------------------|--------------------|
-| [17](docker-compose-full-example.yml#L17) | [Line 5](docker-compose-full-example.yml#L5) | `RedBot`           |
-| [18](docker-compose-full-example.yml#L18) | [Line 3](docker-compose-full-example.yml#L3) | `red-bot`          |
-| [20](docker-compose-full-example.yml#L20) | [Line 8](docker-compose-full-example.yml#L8) | `42356`            |
-| [21](docker-compose-full-example.yml#L21) | [Line 7](docker-compose-full-example.yml#L7) | `6133`             |
+| [21](docker-compose-full-example.yml#L21) | [Line 5](docker-compose-full-example.yml#L5) | `RedBot`           |
+| [22](docker-compose-full-example.yml#L22) | [Line 3](docker-compose-full-example.yml#L3) | `red-bot`          |
+| [24](docker-compose-full-example.yml#L24) | [Line 7](docker-compose-full-example.yml#L7) | `42356`            |
+| [25](docker-compose-full-example.yml#L25) | [Line 13](docker-compose-full-example.yml#L13) | `6133`             |
 
 Once you've done this, run the following command.
 
